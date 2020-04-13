@@ -15,11 +15,6 @@ do
     echo "Enter Secret Key:"
     read inp
 
-    if [ $fcount == 0 ]
-    then
-        exit
-    fi
-
     if [ $inp == $secret ]
     then
         success=1
@@ -30,6 +25,11 @@ do
         echo "You have ${fcount} tries left "
     fi
 done
+
+if [ $fcount == 0 ]
+then
+        exit
+fi
 
 
 #3
